@@ -31,6 +31,7 @@
   {
     _history = [[NSMutableAttributedString alloc] init];
   }
+  //some comment
   return _history;
 }
 - (CardMatchingGame *)game

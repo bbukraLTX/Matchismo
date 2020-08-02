@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 
-- (matchingType)getGameMode { // abstract
+- (matchingType)getGameMode {
   return _3match;
 }
 @end
