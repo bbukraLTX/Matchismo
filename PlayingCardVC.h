@@ -2,7 +2,7 @@
 // Created by Barak Bukra.
 
 #include "ViewController.h"
-#include "MatchHistoryVC.h"
+#import "Grid.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PlayingCardVC : ViewController

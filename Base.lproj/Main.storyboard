@@ -17,8 +17,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="rNs-KE-6uR" kind="relationship" relationship="viewControllers" id="MQP-wj-cop"/>
-                        <segue destination="xtC-h0-8HC" kind="relationship" relationship="viewControllers" id="thB-uc-QpO"/>
+                        <segue destination="f1r-kM-jpm" kind="relationship" relationship="viewControllers" id="cle-nC-zCb"/>
+                        <segue destination="Dy4-uj-xH7" kind="relationship" relationship="viewControllers" id="BAw-2g-3ib"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HYs-4R-JOV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -33,437 +33,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7WY-7p-YhM">
-                                <rect key="frame" x="9" y="544" width="132" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7WY-7p-YhM">
+                                <rect key="frame" x="16" y="542" width="132" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MkJ-SF-vIS">
-                                <rect key="frame" x="16" y="441" width="343" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9N-mo-OB9">
-                                <rect key="frame" x="320" y="501" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9N-mo-OB9">
+                                <rect key="frame" x="320" y="554" width="39" height="30"/>
                                 <state key="normal" title="Reset"/>
                                 <connections>
                                     <action selector="onPressResetButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="4cx-r2-3a7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q24-zb-TTh">
-                                <rect key="frame" x="16" y="101" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOB-qq-P5R">
+                                <rect key="frame" x="16" y="504" width="91" height="30"/>
+                                <state key="normal" title="Draw 3 cards"/>
                                 <connections>
-                                    <action selector="touchCardButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="ihD-f4-DD6"/>
+                                    <action selector="draw3CardsButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="Plt-Qf-44l"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEt-Ob-Xlj">
-                                <rect key="frame" x="77" y="101" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="pQW-3g-lCd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Rz-x9-xSo">
-                                <rect key="frame" x="136" y="101" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="1YC-m0-aOS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVH-mZ-LKM">
-                                <rect key="frame" x="199" y="101" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="cVD-KJ-QRv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1X-gE-xke">
-                                <rect key="frame" x="260" y="101" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="6qE-g9-CvH"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4jG-El-12A">
-                                <rect key="frame" x="319" y="101" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="34u-Tb-Trf"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cO6-c4-bMo">
-                                <rect key="frame" x="16" y="169" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="8yU-W0-NBU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgo-Eg-ggM">
-                                <rect key="frame" x="77" y="169" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="P2C-vB-yYU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ena-Rr-q1u">
-                                <rect key="frame" x="136" y="169" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="MVP-Ay-nEH"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTA-j4-btM">
-                                <rect key="frame" x="199" y="169" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="REC-sh-Y5R"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQj-cG-hlk">
-                                <rect key="frame" x="260" y="169" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="1EQ-lR-Mj1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1S6-X5-KcN">
-                                <rect key="frame" x="319" y="169" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="XcZ-Fr-rQO"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcJ-s7-cl8">
-                                <rect key="frame" x="16" y="237" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="9Zr-4S-pfo"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlD-hM-9nZ">
-                                <rect key="frame" x="77" y="237" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="kkJ-vW-yHz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kum-w6-7gI">
-                                <rect key="frame" x="136" y="237" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="8EM-kz-3p1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hxb-P2-SnS">
-                                <rect key="frame" x="199" y="237" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="ZlS-C9-OU6"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1Z-NK-6Az">
-                                <rect key="frame" x="260" y="237" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="BRc-nh-Swe"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9KA-w6-DFw">
-                                <rect key="frame" x="319" y="237" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="34k-T2-lLT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEH-qd-9rq">
-                                <rect key="frame" x="16" y="305" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="cw9-sb-CMG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6HE-W1-5KH">
-                                <rect key="frame" x="77" y="305" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="tYJ-I5-esL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAB-47-5ii">
-                                <rect key="frame" x="136" y="305" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="BN8-Lr-zCT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOK-P4-NTJ">
-                                <rect key="frame" x="199" y="305" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="HFn-Ot-j6e"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGD-et-ILv">
-                                <rect key="frame" x="260" y="305" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="Bvu-ab-rj6"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRF-1g-knY">
-                                <rect key="frame" x="319" y="305" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="cjw-Q9-2Wt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMT-OL-kou">
-                                <rect key="frame" x="16" y="373" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="Zdv-OM-n48"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aX-ZX-7jY">
-                                <rect key="frame" x="77" y="373" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="Kv4-xP-jOn"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yh0-V9-CK4">
-                                <rect key="frame" x="136" y="373" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="BQF-SG-Ng2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOq-Bb-AQ3">
-                                <rect key="frame" x="199" y="373" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="p1E-1T-riA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ty-eP-oRb">
-                                <rect key="frame" x="260" y="373" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="1fq-SD-jTw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Vd-Dp-ohU">
-                                <rect key="frame" x="319" y="373" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="Dy4-uj-xH7" eventType="touchUpInside" id="GGp-vb-37K"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZM9-Uh-Dtm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="506"/>
+                                <gestureRecognizers/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="S9N-mo-OB9" firstAttribute="centerY" secondItem="7WY-7p-YhM" secondAttribute="centerY" id="1Hw-aB-CZz"/>
+                            <constraint firstItem="YOB-qq-P5R" firstAttribute="top" secondItem="ZM9-Uh-Dtm" secondAttribute="bottom" constant="-2" id="37D-Hz-i6y"/>
+                            <constraint firstItem="7WY-7p-YhM" firstAttribute="leading" secondItem="rfK-d8-uMv" secondAttribute="leading" constant="16" id="HhH-dY-pf3"/>
+                            <constraint firstItem="ZM9-Uh-Dtm" firstAttribute="top" secondItem="rfK-d8-uMv" secondAttribute="top" id="HnZ-Zd-GEu"/>
+                            <constraint firstItem="rfK-d8-uMv" firstAttribute="bottom" secondItem="7WY-7p-YhM" secondAttribute="bottom" constant="22" id="Lr0-3A-hQu"/>
+                            <constraint firstItem="7WY-7p-YhM" firstAttribute="top" secondItem="YOB-qq-P5R" secondAttribute="bottom" constant="8" id="Uv9-gk-wCn"/>
+                            <constraint firstItem="YOB-qq-P5R" firstAttribute="leading" secondItem="7WY-7p-YhM" secondAttribute="leading" id="XOL-MF-r9P"/>
+                            <constraint firstItem="ZM9-Uh-Dtm" firstAttribute="width" secondItem="8MF-4E-1Xv" secondAttribute="width" id="aRy-Fo-Z5b"/>
+                            <constraint firstItem="rfK-d8-uMv" firstAttribute="trailing" secondItem="S9N-mo-OB9" secondAttribute="trailing" constant="16" id="oB7-9j-2kB"/>
+                            <constraint firstItem="ZM9-Uh-Dtm" firstAttribute="leading" secondItem="rfK-d8-uMv" secondAttribute="leading" id="yYs-Fk-CnN"/>
+                            <constraint firstItem="rfK-d8-uMv" firstAttribute="bottom" secondItem="S9N-mo-OB9" secondAttribute="bottom" constant="34" id="zpo-5c-G0C"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rfK-d8-uMv"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Set Card Game" id="1jF-9s-sYO"/>
                     <navigationItem key="navigationItem" title="Set Card Game" id="pTo-uY-eea">
-                        <barButtonItem key="rightBarButtonItem" title="History" id="7vt-wD-pbA">
-                            <connections>
-                                <segue destination="Rod-HL-EeP" kind="show" identifier="setMatchHistory" id="Imc-sn-aGw"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="History" id="7vt-wD-pbA"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="resultsLabel" destination="MkJ-SF-vIS" id="zWl-v5-6Nj"/>
+                        <outlet property="cardsView" destination="ZM9-Uh-Dtm" id="BJY-lk-316"/>
                         <outlet property="scoreLabel" destination="7WY-7p-YhM" id="UlK-IH-J69"/>
-                        <outletCollection property="cardButtons" destination="Q24-zb-TTh" id="2wY-Mq-zOl"/>
-                        <outletCollection property="cardButtons" destination="PEt-Ob-Xlj" id="5ap-HP-38N"/>
-                        <outletCollection property="cardButtons" destination="8Rz-x9-xSo" id="mIz-mP-7Ho"/>
-                        <outletCollection property="cardButtons" destination="WVH-mZ-LKM" id="dHW-C3-II1"/>
-                        <outletCollection property="cardButtons" destination="F1X-gE-xke" id="Vul-Jc-hlB"/>
-                        <outletCollection property="cardButtons" destination="4jG-El-12A" id="ism-CE-Nt8"/>
-                        <outletCollection property="cardButtons" destination="1S6-X5-KcN" id="IUF-kl-buc"/>
-                        <outletCollection property="cardButtons" destination="PQj-cG-hlk" id="NYZ-jU-OrW"/>
-                        <outletCollection property="cardButtons" destination="PTA-j4-btM" id="xTI-wT-K6H"/>
-                        <outletCollection property="cardButtons" destination="Ena-Rr-q1u" id="YGu-SD-HS6"/>
-                        <outletCollection property="cardButtons" destination="Xgo-Eg-ggM" id="mMp-m6-V18"/>
-                        <outletCollection property="cardButtons" destination="cO6-c4-bMo" id="WHm-NB-szr"/>
-                        <outletCollection property="cardButtons" destination="9KA-w6-DFw" id="v4F-Do-OSY"/>
-                        <outletCollection property="cardButtons" destination="Q1Z-NK-6Az" id="xdt-4i-Fwc"/>
-                        <outletCollection property="cardButtons" destination="Hxb-P2-SnS" id="fgz-Tg-vNy"/>
-                        <outletCollection property="cardButtons" destination="kum-w6-7gI" id="qVl-bT-cOr"/>
-                        <outletCollection property="cardButtons" destination="XlD-hM-9nZ" id="KoZ-Pg-fTT"/>
-                        <outletCollection property="cardButtons" destination="CcJ-s7-cl8" id="4QB-rZ-PhZ"/>
-                        <outletCollection property="cardButtons" destination="QRF-1g-knY" id="rX0-Bn-Vm3"/>
-                        <outletCollection property="cardButtons" destination="VGD-et-ILv" id="ViV-e4-cjJ"/>
-                        <outletCollection property="cardButtons" destination="bOK-P4-NTJ" id="CHR-CS-WOD"/>
-                        <outletCollection property="cardButtons" destination="LAB-47-5ii" id="bdv-t9-bJf"/>
-                        <outletCollection property="cardButtons" destination="6HE-W1-5KH" id="6Hu-JX-vDz"/>
-                        <outletCollection property="cardButtons" destination="lEH-qd-9rq" id="eDi-0c-ero"/>
-                        <outletCollection property="cardButtons" destination="4Vd-Dp-ohU" id="Wzd-F7-42P"/>
-                        <outletCollection property="cardButtons" destination="3Ty-eP-oRb" id="5k5-C8-ODR"/>
-                        <outletCollection property="cardButtons" destination="sOq-Bb-AQ3" id="kLm-fP-rns"/>
-                        <outletCollection property="cardButtons" destination="yh0-V9-CK4" id="IDA-dh-vCb"/>
-                        <outletCollection property="cardButtons" destination="9aX-ZX-7jY" id="3Fl-u2-zr3"/>
-                        <outletCollection property="cardButtons" destination="hMT-OL-kou" id="zi6-TI-69g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ntl-ie-iBO" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828" y="447"/>
-        </scene>
-        <!--Match History-->
-        <scene sceneID="cBb-Nw-HZy">
-            <objects>
-                <viewController id="Rod-HL-EeP" customClass="MatchHistoryVC" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NtT-v8-EYQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="q0y-EF-Uje">
-                                <rect key="frame" x="67" y="107" width="240" height="453"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="eZ4-K1-AEV"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Match History" id="OHQ-Le-Sqv"/>
-                    <connections>
-                        <outlet property="setCardHistory" destination="q0y-EF-Uje" id="qbf-YE-ag0"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="amN-U2-UFl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1540" y="447"/>
+            <point key="canvasLocation" x="34" y="517"/>
         </scene>
         <!--Playing Card Game-->
         <scene sceneID="D77-Ro-R8X">
@@ -473,479 +95,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5S-rJ-DC6">
-                                <rect key="frame" x="9" y="544" width="132" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5S-rJ-DC6">
+                                <rect key="frame" x="16" y="519" width="132" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOu-uh-nzM">
-                                <rect key="frame" x="16" y="441" width="343" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axw-Gx-z7v">
-                                <rect key="frame" x="320" y="501" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axw-Gx-z7v">
+                                <rect key="frame" x="299" y="515" width="60" height="29"/>
                                 <state key="normal" title="Reset"/>
                                 <connections>
                                     <action selector="onPressResetButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="fpF-7S-rSM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxc-9M-5Zt">
-                                <rect key="frame" x="16" y="101" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SAb-iG-U9k">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="506"/>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <action selector="touchCardButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="ulm-qv-CQ6"/>
+                                    <outletCollection property="gestureRecognizers" destination="A3B-1a-osl" appends="YES" id="Iyz-ES-D1w"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Icr-26-kPV">
-                                <rect key="frame" x="77" y="101" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="yEv-CH-JWW"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HnG-xJ-qZQ">
-                                <rect key="frame" x="136" y="101" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="q0z-ZX-EdC"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3o-qz-E3s">
-                                <rect key="frame" x="199" y="101" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="9zM-fP-BXG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpJ-Dg-1PZ">
-                                <rect key="frame" x="260" y="101" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="AlO-76-Mfs"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hR-qu-2kB">
-                                <rect key="frame" x="319" y="101" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="JEU-vh-7Px"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WS9-ID-i2T">
-                                <rect key="frame" x="16" y="169" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="EY7-C6-r9v"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEb-XO-1x1">
-                                <rect key="frame" x="77" y="169" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="tCC-Hu-ghq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNz-5d-6FY">
-                                <rect key="frame" x="136" y="169" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="RQM-Dx-CGS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJU-0S-Ts7">
-                                <rect key="frame" x="199" y="169" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="H9k-IY-fi1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeY-yu-eox">
-                                <rect key="frame" x="260" y="169" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="QNP-BD-x2t"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5p-lm-nGJ">
-                                <rect key="frame" x="319" y="169" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="e9Q-JE-rn7"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUS-HN-edB">
-                                <rect key="frame" x="16" y="237" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="DRp-Ey-ITM"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="id7-Hl-vLd">
-                                <rect key="frame" x="77" y="237" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="UOz-8w-6an"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ziD-ZA-lPk">
-                                <rect key="frame" x="136" y="237" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="Ukp-31-Ztg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btT-Yw-L7r">
-                                <rect key="frame" x="199" y="237" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="Mkt-0t-QHx"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5AS-OZ-vQm">
-                                <rect key="frame" x="260" y="237" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="uJ1-Ms-Gul"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTf-PE-FkP">
-                                <rect key="frame" x="319" y="237" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="9we-VM-LTh"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcI-YG-v58">
-                                <rect key="frame" x="16" y="305" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="7wu-l3-YDe"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mX-uu-6cD">
-                                <rect key="frame" x="77" y="305" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="7Xy-2Z-oEz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O36-wB-0ET">
-                                <rect key="frame" x="136" y="305" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="sMb-aX-dB7"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOg-be-bcJ">
-                                <rect key="frame" x="199" y="305" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="ePE-hN-XDW"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGB-cU-HPx">
-                                <rect key="frame" x="260" y="305" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="X5M-TH-7Lt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9v-Tg-Dvr">
-                                <rect key="frame" x="319" y="305" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="74c-k5-OiT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZM-lh-TmV">
-                                <rect key="frame" x="16" y="373" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="McW-7g-Ezz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9kV-Up-bdQ">
-                                <rect key="frame" x="77" y="373" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="SzP-9O-9Ng"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gha-Wo-Fh6">
-                                <rect key="frame" x="136" y="373" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="Y13-FJ-RQH"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bU-R5-WI1">
-                                <rect key="frame" x="199" y="373" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="MFL-2x-b5S"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Mz-ox-86A">
-                                <rect key="frame" x="260" y="373" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="s0I-0L-tUq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Tz-qd-8mN">
-                                <rect key="frame" x="319" y="373" width="40" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="cardback">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCardButton:" destination="f1r-kM-jpm" eventType="touchUpInside" id="u6V-GE-F0i"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="SAb-iG-U9k" firstAttribute="top" secondItem="TzU-hr-SuA" secondAttribute="top" id="7Ua-vu-WmT"/>
+                            <constraint firstItem="SAb-iG-U9k" firstAttribute="leading" secondItem="TzU-hr-SuA" secondAttribute="leading" id="BML-iJ-OML"/>
+                            <constraint firstItem="TzU-hr-SuA" firstAttribute="trailing" secondItem="axw-Gx-z7v" secondAttribute="trailing" constant="16" id="CKK-o6-OHf"/>
+                            <constraint firstItem="q5S-rJ-DC6" firstAttribute="leading" secondItem="TzU-hr-SuA" secondAttribute="leading" constant="16" id="HNM-81-Owd"/>
+                            <constraint firstItem="axw-Gx-z7v" firstAttribute="top" secondItem="SAb-iG-U9k" secondAttribute="bottom" constant="8" id="KSb-eg-5Pj"/>
+                            <constraint firstItem="TzU-hr-SuA" firstAttribute="bottom" secondItem="q5S-rJ-DC6" secondAttribute="bottom" constant="78" id="Ycb-6c-ZNO"/>
+                            <constraint firstItem="q5S-rJ-DC6" firstAttribute="top" secondItem="SAb-iG-U9k" secondAttribute="bottom" constant="12" id="b1x-z3-eYU"/>
+                            <constraint firstItem="SAb-iG-U9k" firstAttribute="centerX" secondItem="5a5-GV-6fm" secondAttribute="centerX" id="dyb-Vy-VHZ"/>
+                            <constraint firstItem="TzU-hr-SuA" firstAttribute="bottom" secondItem="axw-Gx-z7v" secondAttribute="bottom" constant="74" id="iWs-4w-9NM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="TzU-hr-SuA"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Playing Card Game" id="0cW-aU-Ijj"/>
                     <navigationItem key="navigationItem" title="Playing Card Game" id="pMS-dg-GpT">
-                        <barButtonItem key="rightBarButtonItem" title="History" id="xG0-3m-0OH">
-                            <connections>
-                                <segue destination="IiN-5O-ISm" kind="show" identifier="playingCardHistory" destinationCreationSelector="prepare:" id="RnX-4f-jJ4"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="History" id="xG0-3m-0OH"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="resultsLabel" destination="mOu-uh-nzM" id="JWe-Xr-xmZ"/>
+                        <outlet property="cardsView" destination="SAb-iG-U9k" id="S0f-dp-tIS"/>
                         <outlet property="scoreLabel" destination="q5S-rJ-DC6" id="L0e-MQ-LAo"/>
-                        <outletCollection property="cardButtons" destination="lxc-9M-5Zt" id="K5s-fb-lEa"/>
-                        <outletCollection property="cardButtons" destination="Icr-26-kPV" id="4hx-Xg-y1c"/>
-                        <outletCollection property="cardButtons" destination="HnG-xJ-qZQ" id="E03-An-yEM"/>
-                        <outletCollection property="cardButtons" destination="Y3o-qz-E3s" id="UDb-lv-J8d"/>
-                        <outletCollection property="cardButtons" destination="gpJ-Dg-1PZ" id="vme-7n-Ab1"/>
-                        <outletCollection property="cardButtons" destination="1hR-qu-2kB" id="gqZ-XM-WvQ"/>
-                        <outletCollection property="cardButtons" destination="y5p-lm-nGJ" id="3h8-YR-aGd"/>
-                        <outletCollection property="cardButtons" destination="jeY-yu-eox" id="cmt-C1-KTE"/>
-                        <outletCollection property="cardButtons" destination="YJU-0S-Ts7" id="rQR-sP-MC2"/>
-                        <outletCollection property="cardButtons" destination="QNz-5d-6FY" id="UPj-4q-Uve"/>
-                        <outletCollection property="cardButtons" destination="xEb-XO-1x1" id="QdK-5s-rV4"/>
-                        <outletCollection property="cardButtons" destination="WS9-ID-i2T" id="mPK-qh-imS"/>
-                        <outletCollection property="cardButtons" destination="hTf-PE-FkP" id="yiQ-VN-1Fv"/>
-                        <outletCollection property="cardButtons" destination="5AS-OZ-vQm" id="JFY-h4-lMx"/>
-                        <outletCollection property="cardButtons" destination="btT-Yw-L7r" id="HwP-Gt-MvF"/>
-                        <outletCollection property="cardButtons" destination="ziD-ZA-lPk" id="qFT-Ie-1yB"/>
-                        <outletCollection property="cardButtons" destination="id7-Hl-vLd" id="AJm-b4-6ox"/>
-                        <outletCollection property="cardButtons" destination="YUS-HN-edB" id="KfX-e3-N19"/>
-                        <outletCollection property="cardButtons" destination="k9v-Tg-Dvr" id="rl3-eR-nxZ"/>
-                        <outletCollection property="cardButtons" destination="wGB-cU-HPx" id="Phf-H5-nWD"/>
-                        <outletCollection property="cardButtons" destination="pOg-be-bcJ" id="aBK-i7-M3d"/>
-                        <outletCollection property="cardButtons" destination="O36-wB-0ET" id="6mU-Y4-MAD"/>
-                        <outletCollection property="cardButtons" destination="6mX-uu-6cD" id="iON-Os-JO6"/>
-                        <outletCollection property="cardButtons" destination="lcI-YG-v58" id="9b7-ya-Rfx"/>
-                        <outletCollection property="cardButtons" destination="8Tz-qd-8mN" id="om4-2I-Igz"/>
-                        <outletCollection property="cardButtons" destination="5Mz-ox-86A" id="Fce-4T-Pdf"/>
-                        <outletCollection property="cardButtons" destination="2bU-R5-WI1" id="tdn-3q-ZHw"/>
-                        <outletCollection property="cardButtons" destination="gha-Wo-Fh6" id="2Fk-v6-N3p"/>
-                        <outletCollection property="cardButtons" destination="9kV-Up-bdQ" id="paj-Gx-Srr"/>
-                        <outletCollection property="cardButtons" destination="jZM-lh-TmV" id="DOP-Yj-XcD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w6J-2r-pyM" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="828" y="-316"/>
-        </scene>
-        <!--Match History-->
-        <scene sceneID="ZRx-bM-e2V">
-            <objects>
-                <viewController id="IiN-5O-ISm" customClass="MatchHistoryVC" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ofn-lP-klf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yQD-zi-rLa">
-                                <rect key="frame" x="67" y="107" width="240" height="453"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="wZL-Sx-Xm6"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Match History" id="GgB-32-tzT"/>
+                <exit id="nQR-jY-RJM" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="right" id="A3B-1a-osl">
                     <connections>
-                        <outlet property="playingCardHistory" destination="yQD-zi-rLa" id="ss8-d8-gi1"/>
+                        <action selector="swipeCardRight:" destination="nQR-jY-RJM" id="now-4P-X97"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LoI-75-ebM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1540" y="-316.19190404797604"/>
-        </scene>
-        <!--Playing Card Game-->
-        <scene sceneID="39g-ii-lL8">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xtC-h0-8HC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Playing Card Game" id="lrJ-dc-z3S"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ybi-DS-2HV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="f1r-kM-jpm" kind="relationship" relationship="rootViewController" id="zHP-0E-dxR"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v7f-cx-pJa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="70" y="-316"/>
-        </scene>
-        <!--Set Card Game-->
-        <scene sceneID="OJJ-Hg-Ppo">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rNs-KE-6uR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Set Card Game" id="b6B-Nb-vsa"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4qx-4M-56c">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Dy4-uj-xH7" kind="relationship" relationship="rootViewController" id="1Uv-uG-lq8"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dYY-Uv-vhj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="69.599999999999994" y="446.62668665667172"/>
+            <point key="canvasLocation" x="32.799999999999997" y="-158.77061469265368"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="cardback" width="64" height="96"/>
-    </resources>
 </document>

@@ -27,6 +27,7 @@
 
 - (instancetype)initWithCardCount:(NSUInteger)count usingDeck:(Deck *)deck
 {
+  self.deck = deck;
   self.gameMode = _2match;
   self.hasGameStarted = NO;
   if(self = [super init])

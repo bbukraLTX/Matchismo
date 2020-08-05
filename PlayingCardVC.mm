@@ -3,10 +3,19 @@
 
 #import "PlayingCardVC.h"
 #import "PlayingCardDeck.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
+@interface PlayingCardVC()
+@property (weak, nonatomic) IBOutlet UIView *cardsView;
 
+
+@end
 @implementation PlayingCardVC
+
+
+
+
 @synthesize cardDeck = _cardDeck;
 - (Deck *)createNewDeck // abstract
 {
@@ -27,9 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (matchingType)getGameMode { 
   return _2match;
 }
-- (IBSegueAction MatchHistoryVC *)prepare:(NSCoder *)coder {
-  return [[MatchHistoryVC alloc] initWithCoder:coder];
-}
+
 @end
 
 NS_ASSUME_NONNULL_END
